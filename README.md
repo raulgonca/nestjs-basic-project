@@ -12,5 +12,10 @@ Basic NestJs Application
 docker compose up --build
 ```
 
+### Install application dependencies:
+```bash
+cd ./api && npm install
+```
+
 <br></br>
 App will run at: [http://localhost:3000](http://localhost:3000)
