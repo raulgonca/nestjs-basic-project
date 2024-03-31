@@ -6,8 +6,9 @@ services:
       - "3000:3000"
     depends_on:
       - db
+  
     environment:
-      DATABASE_URL: postgres://user:password@db:5432/dbname
+      DATABASE_URL: postgres://user:password@db:5432/postgres
 
   db:
     image: postgres:13
@@ -16,7 +17,7 @@ services:
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: dbname
+      POSTGRES_DB: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data
 

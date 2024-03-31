@@ -8,11 +8,11 @@ import { UserController } from './Users/user.controller';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'db',
       port: 5432,
       username: 'user',
       password: 'password',
-      database: 'dbname',
+      database: 'postgres',
       entities: [User],
       synchronize: true,
       
