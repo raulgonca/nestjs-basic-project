@@ -6,7 +6,7 @@ export class ProjectController {
   constructor(private readonly ProjectService: ProjectService) {}
 
   @Post()
-  createUser(@Body() { nameproject, description, fechaInicio, fechaFinalizacion }: { nameproject: string; description: string ,fechaInicio : Date, fechaFinalizacion: Date }) {
+  createProject(@Body() { nameproject, description, fechaInicio, fechaFinalizacion }: { nameproject: string; description: string ,fechaInicio : Date, fechaFinalizacion: Date }) {
     return this.ProjectService.createProject(nameproject, description, fechaInicio, fechaFinalizacion);
   }
 

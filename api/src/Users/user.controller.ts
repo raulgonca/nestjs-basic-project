@@ -6,7 +6,7 @@ export class UserController {
   constructor(private readonly UserService: UserService) {}
 
   @Post()
-  createUser(@Body() { username, password }: { username: string; password: string[] }) {
+  createUser(@Body() { username, password }: { username: string; password: string}) {
     return this.UserService.createUser(username, password);
   }
 
